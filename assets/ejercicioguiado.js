@@ -12,9 +12,11 @@ function Pokemon(nombre,color,poderDeAtaque){
 	}
 	this.aumentarAmistad = function(valor){
 		this.nivelDeAmistad  = this.nivelDeAmistad + valor
+		return this.nivelDeAmistad
 	}
 	this.atacar = function(pokemon){
 		pokemon.vida = pokemon.vida - this.poderDeAtaque
+		return pokemon.vida
 	}
 }
 
@@ -24,3 +26,5 @@ const Charmander = new Pokemon('Charmander','rojo',20)
 Pikachu.atacar(Charmander)
 
 console.log(Charmander.vida)
+
+poke.innerHTML = Pikachu.mostrarPokemon();
