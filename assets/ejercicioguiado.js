@@ -22,9 +22,11 @@ function Pokemon(nombre,color,poderDeAtaque){
 
 const Pikachu = new Pokemon('Pikachu','amarillo',100)
 const Charmander = new Pokemon('Charmander','rojo',20)
+const Raticate = new Pokemon('Raticate','cafe',100)
+const Ponyta = new Pokemon('Ponyta','blanco',20)
 
 Pikachu.atacar(Charmander)
 
 console.log(Charmander.vida)
 
-poke.innerHTML = Pikachu.mostrarPokemon();
+//poke.innerHTML = Pikachu.mostrarPokemon();
