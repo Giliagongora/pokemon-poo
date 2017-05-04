@@ -25,8 +25,26 @@ const Charmander = new Pokemon('Charmander','rojo',20)
 const Raticate = new Pokemon('Raticate','cafe',100)
 const Ponyta = new Pokemon('Ponyta','blanco',20)
 
-Pikachu.atacar(Charmander)
+//Pikachu.atacar(Charmander)
 
-console.log(Charmander.vida)
+//console.log(Charmander.vida)
 
 //poke.innerHTML = Pikachu.mostrarPokemon();
+
+function combat(nombre,color,poderDeAtaque){
+
+	if(opcion1 == opcion2){
+		
+	}
+	
+	var base = document.getElementById("base");
+	var opcion1 = document.getElementById("opcion1").value;
+	var opcion2 = document.getElementById("opcion2").value;
+	var poder = prompt("Ingresa nivel de ataque");
+	var pelea1 = new Pokemon(opcion1,+ color , + poder);
+	var pelea2 = new Pokemon(opcion2, + color, + poderDeAtaque);
+
+	pelea1.atacar(pelea2);
+
+	base.innerHTML = pelea1.nombre + " atacó a "+ pelea2.nombre + " y " + pelea2.nombre +" tiene una vida de: " + pelea2.vida;
+}
