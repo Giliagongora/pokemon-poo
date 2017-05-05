@@ -33,18 +33,19 @@ const Ponyta = new Pokemon('Ponyta','blanco',20)
 
 function combat(nombre,color,poderDeAtaque){
 
-	if(opcion1 == opcion2){
-		
-	}
-	
 	var base = document.getElementById("base");
 	var opcion1 = document.getElementById("opcion1").value;
 	var opcion2 = document.getElementById("opcion2").value;
+
+	if(opcion1 == opcion2){
+		alert("No puedes seleccionar el mismo Pokemón")
+	}else{ 
+
 	var poder = prompt("Ingresa nivel de ataque");
 	var pelea1 = new Pokemon(opcion1,+ color , + poder);
-	var pelea2 = new Pokemon(opcion2, + color, + poderDeAtaque);
-
+	var pelea2 = new Pokemon(opcion2, + color, + poderDeAtaque);	
 	pelea1.atacar(pelea2);
+}
+	base.innerHTML = "<br>" + pelea1.nombre + " atacó a "+ pelea2.nombre + " y " + pelea2.nombre +" tiene una vida de: " + pelea2.vida;
 
-	base.innerHTML = pelea1.nombre + " atacó a "+ pelea2.nombre + " y " + pelea2.nombre +" tiene una vida de: " + pelea2.vida;
 }
